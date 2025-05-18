@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>PokéTeam Builder – <%= trainerName %>'s Team</title>
+  <title>PokéTeam Builder - <%= trainerName %>'s Team</title>
   <link rel="stylesheet" href="/css/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
 </head>
@@ -15,7 +15,7 @@
     <% if (!trainer) { %>
       <p>No trainer found. Try adding a Pokémon first!</p>
     <% } else if (!trainer.team.length) { %>
-      <p>This trainer hasn’t added any Pokémon yet.</p>
+      <p>This trainer hasn't added any Pokémon yet.</p>
     <% } else { %>
       <div class="grid">
         <% trainer.team.forEach(p => { %>

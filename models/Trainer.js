@@ -1,13 +1,13 @@
 const mongoose = require('mongoose');
 
-const TrainerSchema = new mongoose.Schema({
+const trainerSchema = new mongoose.Schema({
   name: { type: String, required: true, unique: true },
   team: [
     {
       name: String,
-      sprite: String,
+      sprite: String
     }
   ]
 });
 
-module.exports = mongoose.model('Trainer', TrainerSchema);
+module.exports = mongoose.model('Trainer', trainerSchema, 'trainers');
