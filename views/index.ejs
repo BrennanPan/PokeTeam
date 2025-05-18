@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>PokéTeam Builder</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header><h1>PokéTeam Builder</h1></header>
+
+  <main>
+    <section class="card">
+      <h2>Add to Your Team</h2>
+      <form action="/add" method="POST">
+        <label>Trainer name:
+          <input type="text" name="trainerName" required />
+        </label>
+        <label>Pokémon name:
+          <input type="text" name="pokemonName" required />
+        </label>
+        <button type="submit">Catch!</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>View Your Team</h2>
+      <form action="/team" method="POST">
+        <label>Trainer name:
+          <input type="text" name="trainerName" required />
+        </label>
+        <button type="submit">Show Team</button>
+      </form>
+    </section>
+  </main>
+
+</body>
+</html>
