@@ -1,8 +1,8 @@
-import { Router } from 'express';
-import fetch from 'node-fetch';
-import Trainer from '../models/Trainer.js';
+const express = require('express');
+const fetch = require('node-fetch');
+const Trainer = require('../models/Trainer');
 
-const router = Router();
+const router = express.Router();
 
 router.get('/', (req, res) => res.render('index'));
 
@@ -19,6 +19,7 @@ router.post('/add', async (req, res) => {
     const filter = { name: trainerName.toLowerCase() };
     const update = { $addToSet: { team: { name: data.name, sprite } } };
     const opts = { returnDocument: 'after', upsert: true };
+
     const trainer = await Trainer.findOneAndUpdate(filter, update, opts);
 
     const facts = {
@@ -32,7 +33,8 @@ router.post('/add', async (req, res) => {
 
     res.render('add-result', { trainer, facts, error: null });
   } catch (err) {
-    res.render('add-result', { trainer: null, facts: null, error: err.message });  }
+    res.render('add-result', { trainer: null, facts: null, error: err.message });
+  }
 });
 
 router.post('/team', async (req, res) => {
@@ -43,4 +45,4 @@ router.post('/team', async (req, res) => {
   res.render('team', { trainerName, trainer });
 });
 
-export default router;
+module.exports = router;

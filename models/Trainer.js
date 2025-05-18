@@ -1,11 +1,13 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
-const trainerSchema = new mongoose.Schema({
-  name: { type: String, required: true, lowercase: true, unique: true },
-  team:  [{
-    name: String,
-    sprite: String             
-  }]
+const TrainerSchema = new mongoose.Schema({
+  name: { type: String, required: true, unique: true },
+  team: [
+    {
+      name: String,
+      sprite: String,
+    }
+  ]
 });
 
-export default mongoose.model('Trainer', trainerSchema, 'UsersPokemon');
+module.exports = mongoose.model('Trainer', TrainerSchema);
