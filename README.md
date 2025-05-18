@@ -1,18 +1,7 @@
-# PokéTeam Builder
-
-A tiny Node.js / Express / MongoDB app that lets trainers build and view their Pokémon teams using data from the public **PokéAPI**.
-
-## Features
-* Add any Pokémon to a trainer’s team (max 1 per Pokémon, max 6 recommended)
-* Team data persisted in MongoDB (one document per trainer)
-* Live Pokémon facts (types / height / weight / sprite) fetched from https://pokeapi.co
-* Clean retro styling with a Google Font
-* Deployed for free on Render
-
-## Running locally
-```bash
-git clone https://github.com/yourname/pokemon-team.git
-cd pokemon-team
-npm install
-echo "MONGODB_URI=mongodb+srv://<user>:<pass>@cluster0.mongodb.net/pokemon" > .env
-npm start
+**Submitted by:** Brennan Pan (directory id: `bpan1`)  
+**Group Members:** Brennan Pan (`bpan1`), Bryan Xiong (`bxiong`)  
+**App Description:** Allow users to create a Pokemon team, which is stored in MongoDB. Additionally, the website tells users information about their pokemon. 
+**YouTube Video Link:** [https://www.youtube.com/watch?v=AI76NCQ-FPk](https://www.youtube.com/watch?v=AI76NCQ-FPk) 
+**APIs:** [pokeapi](https://pokeapi.co/docs/v2?adobe_mc=MCMID%3D66391367233124157421165277469342905932%7CMCORGID%3DA8833BC75245AF9E0A490D4D%2540AdobeOrg%7CTS%3D1747591747)  
+**Contact Email:** bpan1@terpmail.umd.edu  
+**Deployed App Link:** [https://poketeam-vpqy.onrender.com/](https://poketeam-vpqy.onrender.com/)

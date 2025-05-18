@@ -10,9 +10,11 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+
 }
 
 header {
+  
   background-color: #ffcb05;
   color: #2d72e0;
   padding: 1rem;
@@ -28,6 +30,7 @@ main {
 }
 
 .card {
+    
   background: white;
   padding: 1.5rem 2rem;
   border-radius: 12px;
@@ -42,6 +45,7 @@ input, button {
   padding: .5rem;
   margin-top: .5rem;
   width: 100%;
+
 }
 
 button {
@@ -60,11 +64,13 @@ button:hover {
   flex-wrap: wrap;
   gap: 1.5rem;
   justify-content: center;
+
 }
 
 figure {
   margin: 0;
   text-align: center;
+
 }
 
 .error {
