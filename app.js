@@ -23,7 +23,7 @@ mongoose.connect(process.env.MONGODB_URI, { serverSelectionTimeoutMS: 30000 })
 
     app.use(express.urlencoded({ extended: true }));
     app.use(express.static(path.join(__dirname, 'public')));
-    
+
     app.use('/', trainerRouter);
 
     app.use((req, res) => res.status(404).render('404'));
